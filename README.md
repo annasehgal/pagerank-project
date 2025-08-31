@@ -1,1 +1,1 @@
-# pagerank-project
+# PageRank Algorithm Project
