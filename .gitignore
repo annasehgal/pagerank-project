@@ -1,0 +1,26 @@
+*.swp
+*.swo
+*.un~
+Session.vim
+*~
+.DS_Store
+.Spotlight-V100
+._*
+.vscode/
+.AppleDouble
+.LSOverride
+Icon
+.DocumentRevisions-V100
+.fseventsd
+.Spotlight-V100
+.TemporaryItems
+.Trashes
+.VolumeIcon.icns
+.com.apple.timemachine.donotpresent
+.AppleDB
+.AppleDesktop
+Network Trash Folder
+Temporary Items
+.apdisk
+Thumbs.db
+Desktop.ini
