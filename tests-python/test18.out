@@ -29,4 +29,4 @@ Node 28: 0.015206
 Node 29: 0.091410
 Node 30: 0.123160
 Node 31: 0.057072
-Node 32: 0.071907
+Node 32: 0.071907 #skipped in c++ implementation Because PageRank must assign a value to every node, even isolated ones, to be correct.

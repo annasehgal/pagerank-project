@@ -46,10 +46,10 @@ void Util::builder(Graph& gr){
 // }
 void Util::ranker(const Graph& gr){
     const auto& pages = gr.findedge();
-    cout << "\nPager scores for ranks:" << endl;
+    cout << "Pager scores for ranks:" << endl;
     for(const auto& pg : pages){
         double val = pg->ranknow();
-        val = round(val * 1e6) / 1e6; // proper rounding
-        cout << "Node " << pg->nodeID() << ": " << fixed << setprecision(6) << val << endl;
+        val = round(val * 1e3) / 1e3; // proper rounding
+        cout << "Node " << pg->nodeID() << ": " << fixed << setprecision(3) << val << endl;
     }
 }
