@@ -13,10 +13,12 @@ shared_ptr<Node> Graph::accessnode(int id) const{
 
 }
 int Graph::noofnodes() const{
+    return int(webpages.size()); 
 
 }
 void Graph::clear()// reset graph
 {
+    webpages.clear();
 
 }
 void Graph::insertedge(int start, int end){
