@@ -11,7 +11,7 @@ class Pagerank{
     Pagerank(double damp = 0.85, 
         double eps = 1e-6, 
         int maxIter = 100);
-    void running(Graph& gr);
+    void simulate(Graph& gr);
 
 };
 #endif
