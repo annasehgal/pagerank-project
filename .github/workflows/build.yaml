@@ -21,19 +21,25 @@ jobs:
 
       - name: Build project
         run: make
+      
+      - name: Make runTests executable
+        run: chmod +x runTests
 
       - name: Run tests
-        run: |
-          for f in tests/*.in; do
-            base=$(basename "$f" .in)
-            echo "Running test $base..."
-            ./a.out < "tests/$base.in" > "output.tmp"
-            if diff -q "output.tmp" "tests/$base.out"; then
-              echo "Test $base passed"
-            else
-              echo "Test $base failed"
-              diff "output.tmp" "tests/$base.out" || true
-              exit 1
-            fi
-          done
+        run: ./runTests a.out tests/
+
+      # - name: Run tests
+      #   run: |
+      #     for f in tests/*.in; do
+      #       base=$(basename "$f" .in)
+      #       echo "Running test $base..."
+      #       ./a.out < "tests/$base.in" > "output.tmp"
+      #       if diff -q "output.tmp" "tests/$base.out"; then
+      #         echo "Test $base passed"
+      #       else
+      #         echo "Test $base failed"
+      #         diff "output.tmp" "tests/$base.out" || true
+      #         exit 1
+      #       fi
+      #     done
 
