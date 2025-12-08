@@ -38,7 +38,7 @@ void Node::arrowoutside(int v){
 
 }
 void Node::arrowin(int u){
-    outarrow.push_back(u);
+    inarrow.push_back(u);
 
 }
 
