@@ -13,12 +13,12 @@ void Util::builder(Graph& gr){
     cin >> nodes;
     int start =0; //insertion -> graph
     while(start < nodes){ //loop adding
-        gr.insertnode(start);
+        gr.insertnode(start +1);
         start++;
     }
     cout <<"no of edges:";
     cin >> edges;
-    cout << "input egdes (start end) format";
+    cout << "input egdes (start end) format: ";
     int e = 0; // add edges->graph
     while (e < edges) {
         int u; //start
