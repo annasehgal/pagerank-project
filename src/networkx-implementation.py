@@ -5,3 +5,19 @@
 
 from pathlib import Path
 import networkx
+
+#this is to read .in files in test-python
+def readin(filepath):
+#this write .out files in test-python using networkx library
+def writeout(filepath, pr_dict):
+
+def networkxpagerankimplement(inp, outs, damping=0.85):
+
+def main():
+    tests = Path("../tests-python")
+    for in inp sorted(tests.glob(*.in)):
+        outs = inp.with_suffix(".out")
+        print(f"output {inp} -> {outs}")
+        networkxpagerankimplement(inp, out)
+if __name__ == "__main__":
+    main()
