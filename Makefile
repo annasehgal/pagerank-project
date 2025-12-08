@@ -3,10 +3,10 @@ CXXFLAGS = -std=c++17
 # SRC = src/pagerank.cpp
 SRC = src/main.cpp \
       src/graph.cpp \
-      src/node.cpp \
+      src/Node.cpp \
       src/pagerank.cpp \
       src/util.cpp
-	  
+
 all:
 	$(CXX) $(CXXFLAGS) $(SRC)
 
