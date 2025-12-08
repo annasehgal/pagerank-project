@@ -17,7 +17,8 @@ def readin(file_path):
 #this write .out files in test-python using networkx library
 def writeout(file_path, pr_dict):
     with open(file_path, "w") as o:
-
+        for node, rank in sorted(pr_dict.items()):
+            o.write(f"Node {node+1}: {rank:.6f}\n")
 
 def networkxpagerankimplement(inp, outs, damping=0.85):
 
