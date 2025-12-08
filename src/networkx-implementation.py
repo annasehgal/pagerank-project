@@ -7,9 +7,17 @@ from pathlib import Path
 import networkx
 
 #this is to read .in files in test-python
-def readin(filepath):
+def readin(file_path):
+    with open(file_path, "r") as i:
+        totalnodes = int(i.readline())
+        totaledges = int(i.readline())
+        edges = [tuple(map(int, line.split())) for line in f]
+    return totalnodes, totaledges, edges
+
 #this write .out files in test-python using networkx library
-def writeout(filepath, pr_dict):
+def writeout(file_path, pr_dict):
+    with open(file_path, "w") as o:
+
 
 def networkxpagerankimplement(inp, outs, damping=0.85):
 
