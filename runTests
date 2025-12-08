@@ -1,0 +1,32 @@
+#!/bin/bash
+
+# ./runtests <executable> <directory with test files>
+
+passed=0
+failed=0
+
+for f in "$2"/*.in
+do
+  basefile=$(basename -- "$f")
+  testfile="$2/${basefile%.*}.test"
+  outfile="$2/${basefile%.*}.out"
+  difffile="$2/${basefile%.*}.diff"
+
+  echo -n "Running test $f... "
+  ./"$1" < "$f" > "$testfile"
+
+  if cmp -s "$testfile" "$outfile"
+  then
+    echo -e "\e[32mpassed\e[0m"   # green
+    passed=$((passed+1))
+    rm -f "$difffile"
+  else
+    echo -e "\e[31mfailed, see $difffile\e[0m"  # red
+    diff "$testfile" "$outfile" > "$difffile"
+    failed=$((failed+1))
+  fi
+
+  rm "$testfile"
+done
+
+echo -e "\nSummary: \e[32m$passed PASSED\e[0m out of $(($passed+$failed)) (\e[31m$failed failed\e[0m)"
