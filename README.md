@@ -59,7 +59,7 @@ This runs every .in test except 20 since it is too large and therefore is skippe
 # How to run the extension part for pagerank
 1. Compile the Program in /extension-pagerank/ directory with the command pagerank or another executable with a similar name:
 ```bash
-g++ -std=c++17 -o pagerank main.cpp Node.cpp graph.cpp extension.cpp
+g++ -std=c++17 -o pagerank main.cpp ../Node.cpp ../graph.cpp extension.cpp
 ```
 
 2. Run the executable, which reads a total of 4-5 inputs (one custom from the terminal and the rest from /tests/ directory):
