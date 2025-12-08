@@ -10,8 +10,39 @@
 - Over repeated iterations, the process stabilizes, producing a score that reflects global influence in the entire network, not just local link counts.
 
 # Code Overview
+- `Node` and `Graph` implement the graph structure.  
+- `pagerank.cpp` / `extension.cpp` run standard and extended PageRank, respectively.  
+- `tests/` contains input files and expected outputs.  
+- `runTests` automates testing for multiple input files.
 
-# How to Run it
+
+# How to Run it (implementation):
+1. Build/compile the project using Makefile:
+```bash
+make
+```
+
+2. The runner is in the files called runTests, make it executable using:
+```bash
+chmod +x runTests
+```
+
+3. Run each case manually
+(There are 20 different inputs; the 20th one is too large, so it will have issues with running, but the other 19 work.) and they can be run as follows:
+```bash
+./a.out < tests/test1.in
+./a.out < tests/test2.in
+...etc
+```
+The above runs the .in files and runs the tests to check them against the .out file (expected).
+
+4. Run all
+```bash
+./runTests a.out tests/
+```
+This runs every .in test except 20 since it is too large and therefore is skipped.
+
+5. Extra stuff I tried, I implemented the CI/CD pipeline, so every time code is pushed, it builds in actions (GitHub) and runs it to automate it for trial.
 
 # Extension overview:
 - Writes PageRank scores per iteration to a CSV file to log convergence.
