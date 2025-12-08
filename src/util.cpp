@@ -3,6 +3,7 @@
 #include <vector>
 #include <memory>
 #include <iomanip>
+#include <cmath>
 #include "util.h"
 using namespace std;
 
