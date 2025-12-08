@@ -11,13 +11,13 @@ class Graph{
     vector<shared_ptr<Node>> webpages;
     public: 
     // constructo
-    Graph() = default;
+    Graph() {}
     void insertnode(int id); // new node/page added
     shared_ptr<Node> accessnode(int id) const;
     int noofnodes() const; 
     void clear();// reset graph
     void insertedge(int start, int end); // direct edge
-    vector<shared_ptr<Node>>& findedge() const;// list of all edge
+    const vector<shared_ptr<Node>>& findedge() const;// list of all edge
     int noofedges() const;
     vector<int>out(int pageid) const; //arrows outside a node
     vector<int>in(int pageid) const; // arrows towards a node
