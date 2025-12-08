@@ -13,7 +13,7 @@
 
 # How to Run it
 
-# How to run a little extension for pagerank
+# How to run the extension part for pagerank
 
 # Presentation 
 https://www.canva.com/design/DAG5JbQ8B9M/WWN1ZCESVEeP59Asck6Rvw/edit?utm_content=DAG5JbQ8B9M&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton
