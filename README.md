@@ -11,3 +11,10 @@
 
 # Presentation 
 https://www.canva.com/design/DAG5JbQ8B9M/WWN1ZCESVEeP59Asck6Rvw/edit?utm_content=DAG5JbQ8B9M&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton
+
+# References
+- https://networkx.org/documentation/stable/reference/algorithms/generated/networkx.algorithms.link_analysis.pagerank_alg.pagerank.html
+- https://en.wikipedia.org/wiki/PageRank
+- https://web.stanford.edu/class/cs54n/handouts/24-GooglePageRankAlgorithm.pdf
+- https://memgraph.github.io/networkx-guide/algorithms/centrality-algorithms/pagerank/
+- https://stackoverflow.com/questions/43244805/networkx-pagerank-on-undirected-graph
